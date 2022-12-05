@@ -1,0 +1,89 @@
+*{ margin:0;
+    padding: 0;
+    box-sizing: border-box;
+ 
+}
+.background{
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    margin: 0;
+    background-image: url('https://images.pexels.com/photos/928854/pexels-photo-928854.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+    background-repeat: no-repeat;
+    background-color: black;
+    filter:blur(5px);
+}
+
+body{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    
+
+    
+}
+
+.container{
+    display: flex;
+    width: 60vw;  
+    z-index: 999;
+}
+
+.image{
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat:  no-repeat;
+    height: 90vh;
+    border-radius: 10px;
+    color:#fff;
+    cursor: pointer;
+    flex: 0.5;
+    margin:10px;
+    position: relative;
+    transition: flex 0.5s ease-in;
+   
+
+    
+}
+
+
+.image h2{
+    font-size: 30px; 
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0px;
+    text-align: center;
+    opacity: 0;
+
+}
+.neflix{
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0));
+    height: 100%;
+}
+
+.image.active{
+    flex: 5;
+
+}
+
+.image.active h2{
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media(max-width: 480px){
+    .container{
+        width: 100vw;
+    }
+
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5){
+        display: none;
+    }
+}
